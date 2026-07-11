@@ -1,0 +1,6 @@
+{
+  "name": "Engagement Invitation",
+  "description": "A premium, cinematic engagement invitation website with 3D royal double doors entry, soft golden lighting, floating flower petals, and romantic ambient music.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
