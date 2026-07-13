@@ -22,7 +22,11 @@ const createAudioEngine = (): AudioEngine => {
     if (!audioCtx) {
       audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
       mainVolumeNode = audioCtx.createGain();
-      mainVolumeNode.gain.setValueAtTime(0.3, audioCtx.currentTime); // default volume 30%
+      const isMobile = typeof window !== "undefined" && (
+        /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || window.innerWidth < 768
+      );
+      const defaultVolume = isMobile ? 0.5 : 0.3; // slightly increased on mobile to 50% vs 30% desktop
+      mainVolumeNode.gain.setValueAtTime(defaultVolume, audioCtx.currentTime);
       mainVolumeNode.connect(audioCtx.destination);
     }
     if (audioCtx.state === "suspended") {

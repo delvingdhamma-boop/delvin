@@ -18,6 +18,7 @@
   --color-gold-900: #3c230c;
 
   --animate-fade-up: fade-up 1s ease-out forwards;
+  --animate-fade-in: fade-in 1.2s ease-out forwards;
   --animate-gold-shimmer: gold-shimmer 3s ease-in-out infinite;
 
   @keyframes fade-up {
@@ -28,6 +29,15 @@
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
 

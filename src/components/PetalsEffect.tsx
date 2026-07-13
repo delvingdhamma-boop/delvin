@@ -22,20 +22,40 @@ export default function PetalsEffect() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d", { alpha: true });
     if (!ctx) return;
 
     let animationId: number;
     let petals: Petal[] = [];
-    const maxPetals = 45; // balanced density for gorgeous looks without lag
-    const maxSparkles = 35;
+
+    // Device diagnostics and conservative initial parameters
+    const isMobile = window.innerWidth < 768 || navigator.maxTouchPoints > 0;
+    
+    // Default initial counts, optimized for mobile vs desktop
+    let maxPetals = isMobile ? 22 : 45;
+    let maxSparkles = isMobile ? 18 : 35;
+    let enableShadows = !isMobile; // canvas shadowBlur is notoriously heavy on mobile CPUs/GPUs
+
+    // FPS Measurement States
+    let frameCount = 0;
+    let lastFpsCheck = performance.now();
+    let isOptimizedForLag = false;
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
 
-    window.addEventListener("resize", resizeCanvas);
+    // Use a lightweight resize listener
+    let resizeTimeout: any = null;
+    const handleResize = () => {
+      if (resizeTimeout) clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        resizeCanvas();
+      }, 150);
+    };
+
+    window.addEventListener("resize", handleResize);
     resizeCanvas();
 
     const colors = [
@@ -46,18 +66,18 @@ export default function PetalsEffect() {
     ];
 
     const createPetal = (isInitial = false): Petal => {
-      const size = Math.random() * 12 + 6;
+      const size = Math.random() * 11 + 5;
       return {
         x: Math.random() * canvas.width,
         y: isInitial ? Math.random() * canvas.height : -20,
         size,
-        speedY: Math.random() * 1.2 + 0.6,
-        speedX: Math.random() * 0.5 - 0.25,
+        speedY: Math.random() * 1.1 + 0.5,
+        speedX: Math.random() * 0.4 - 0.2,
         rotation: Math.random() * 360,
-        rotationSpeed: (Math.random() * 0.02 + 0.005) * (Math.random() > 0.5 ? 1 : -1),
-        swayAmount: Math.random() * 2 + 1,
-        swaySpeed: Math.random() * 0.02 + 0.005,
-        opacity: Math.random() * 0.4 + 0.4,
+        rotationSpeed: (Math.random() * 0.015 + 0.003) * (Math.random() > 0.5 ? 1 : -1),
+        swayAmount: Math.random() * 1.8 + 0.8,
+        swaySpeed: Math.random() * 0.015 + 0.003,
+        opacity: Math.random() * 0.35 + 0.4,
         color: colors[Math.floor(Math.random() * colors.length)],
         type: "petal",
       };
@@ -67,15 +87,15 @@ export default function PetalsEffect() {
       return {
         x: Math.random() * canvas.width,
         y: isInitial ? Math.random() * canvas.height : -10,
-        size: Math.random() * 2 + 0.8,
-        speedY: Math.random() * 0.4 + 0.2,
-        speedX: Math.random() * 0.2 - 0.1,
+        size: Math.random() * 1.8 + 0.6,
+        speedY: Math.random() * 0.35 + 0.15,
+        speedX: Math.random() * 0.16 - 0.08,
         rotation: 0,
         rotationSpeed: 0,
-        swayAmount: Math.random() * 0.8,
-        swaySpeed: Math.random() * 0.01,
+        swayAmount: Math.random() * 0.6,
+        swaySpeed: Math.random() * 0.008,
         opacity: Math.random() * 0.3 + 0.4,
-        color: "rgba(212, 181, 102, 0.8)", // bright glittering gold
+        color: "rgba(212, 181, 102, 0.85)", // bright glittering gold
         type: "sparkle",
       };
     };
@@ -90,7 +110,6 @@ export default function PetalsEffect() {
 
     const drawPetalShape = (c: CanvasRenderingContext2D, size: number) => {
       c.beginPath();
-      // Draw organic elegant curved petal shape
       c.moveTo(0, 0);
       c.bezierCurveTo(-size / 2, -size / 2, -size, size / 3, 0, size);
       c.bezierCurveTo(size, size / 3, size / 2, -size / 2, 0, 0);
@@ -100,6 +119,42 @@ export default function PetalsEffect() {
 
     const updateAndDraw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Track frames for dynamic FPS monitoring
+      frameCount++;
+      const now = performance.now();
+      const timeElapsed = now - lastFpsCheck;
+
+      // Check performance diagnostics every 1.5 seconds
+      if (timeElapsed >= 1500) {
+        const calculatedFps = (frameCount * 1000) / timeElapsed;
+        frameCount = 0;
+        lastFpsCheck = now;
+
+        // If rendering lag is detected (< 48 FPS), optimize aggressively
+        if (calculatedFps < 48 && !isOptimizedForLag) {
+          maxPetals = Math.max(10, Math.floor(maxPetals * 0.65));
+          maxSparkles = Math.max(8, Math.floor(maxSparkles * 0.6));
+          enableShadows = false; // Turn off expensive 2D shadows
+          isOptimizedForLag = true;
+
+          // Prune arrays to the new capacity immediately
+          let finalPetals: Petal[] = [];
+          let currentPetals = 0;
+          let currentSparkles = 0;
+          
+          petals.forEach((p) => {
+            if (p.type === "petal" && currentPetals < maxPetals) {
+              finalPetals.push(p);
+              currentPetals++;
+            } else if (p.type === "sparkle" && currentSparkles < maxSparkles) {
+              finalPetals.push(p);
+              currentSparkles++;
+            }
+          });
+          petals = finalPetals;
+        }
+      }
 
       petals.forEach((p, idx) => {
         // Update physics
@@ -117,10 +172,13 @@ export default function PetalsEffect() {
           ctx.fillStyle = p.color;
           drawPetalShape(ctx, p.size);
         } else {
-          // Sparkle: draw soft golden glowing particle
           ctx.fillStyle = p.color;
-          ctx.shadowBlur = 4;
-          ctx.shadowColor = "rgba(212, 181, 102, 0.9)";
+          if (enableShadows) {
+            ctx.shadowBlur = 4;
+            ctx.shadowColor = "rgba(212, 181, 102, 0.9)";
+          } else {
+            ctx.shadowBlur = 0;
+          }
           ctx.beginPath();
           ctx.arc(0, 0, p.size, 0, Math.PI * 2);
           ctx.fill();
@@ -140,7 +198,8 @@ export default function PetalsEffect() {
     updateAndDraw();
 
     return () => {
-      window.removeEventListener("resize", resizeCanvas);
+      window.removeEventListener("resize", handleResize);
+      if (resizeTimeout) clearTimeout(resizeTimeout);
       cancelAnimationFrame(animationId);
     };
   }, []);

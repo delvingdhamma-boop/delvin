@@ -1,8 +1,77 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface RoyalDoorsProps {
-  onOpen: () => void;
+  onOpen: (lang: "en" | "gu") => void;
   onTriggerOpenSound?: () => void;
+}
+
+// Client-side background remover helper
+function TransparentImage({ src, alt, className, id }: { src: string; alt: string; className?: string; id?: string }) {
+  const [processedSrc, setProcessedSrc] = useState<string>("");
+
+  useEffect(() => {
+    let active = true;
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.src = src;
+    img.onload = () => {
+      if (!active) return;
+      try {
+        const canvas = document.createElement("canvas");
+        canvas.width = img.width;
+        canvas.height = img.height;
+        const ctx = canvas.getContext("2d");
+        if (!ctx) {
+          setProcessedSrc(src);
+          return;
+        }
+        
+        ctx.drawImage(img, 0, 0);
+        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        const data = imageData.data;
+        
+        // Remove white or light-colored background pixels
+        const threshold = 230;
+        for (let i = 0; i < data.length; i += 4) {
+          const r = data[i];
+          const g = data[i + 1];
+          const b = data[i + 2];
+          const minColor = Math.min(r, g, b);
+          
+          if (minColor > threshold) {
+            const diff = 255 - minColor;
+            const range = 255 - threshold;
+            const alphaFactor = diff / range;
+            data[i + 3] = Math.round(data[i + 3] * alphaFactor);
+          }
+        }
+        
+        ctx.putImageData(imageData, 0, 0);
+        setProcessedSrc(canvas.toDataURL("image/png"));
+      } catch (error) {
+        console.error("Error processing transparent image:", error);
+        setProcessedSrc(src);
+      }
+    };
+    img.onerror = () => {
+      if (!active) return;
+      setProcessedSrc(src);
+    };
+
+    return () => {
+      active = false;
+    };
+  }, [src]);
+
+  return (
+    <img 
+      src={processedSrc || src} 
+      alt={alt} 
+      className={`${className} ${!processedSrc ? "mix-blend-multiply" : ""}`}
+      referrerPolicy="no-referrer"
+      id={id}
+    />
+  );
 }
 
 // Global SVG gradients and definitions
@@ -320,6 +389,28 @@ const TOP_ROSES = [
 export default function RoyalDoors({ onOpen, onTriggerOpenSound }: RoyalDoorsProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isZooming, setIsZooming] = useState(false);
+  const [showLanguageOptions, setShowLanguageOptions] = useState(false);
+  const [viewportScale, setViewportScale] = useState(1);
+
+  useEffect(() => {
+    const handleResize = () => {
+      // The box is ~380px wide and total height is around 720px with headings
+      const targetWidth = 380;
+      const targetHeight = 720;
+      
+      const widthScale = window.innerWidth < targetWidth ? (window.innerWidth - 16) / targetWidth : 1;
+      const heightScale = window.innerHeight < targetHeight ? (window.innerHeight - 32) / targetHeight : 1;
+      
+      // Clamp scale to a minimum of 0.65 and maximum of 1.05 to preserve gorgeous rendering proportions
+      const calculatedScale = Math.max(0.65, Math.min(widthScale, heightScale, 1.05));
+      setViewportScale(calculatedScale);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleOpenDoors = () => {
     if (isOpen) return;
@@ -329,13 +420,19 @@ export default function RoyalDoors({ onOpen, onTriggerOpenSound }: RoyalDoorsPro
       onTriggerOpenSound();
     }
     
+    // Smoothly fade in the language selection card after the doors swing open
     setTimeout(() => {
-      setIsZooming(true);
-    }, 600);
+      setShowLanguageOptions(true);
+    }, 1500);
+  };
 
+  const handleSelectLanguage = (lang: "en" | "gu") => {
+    setShowLanguageOptions(false);
+    setIsZooming(true);
+    
     setTimeout(() => {
-      onOpen();
-    }, 3200);
+      onOpen(lang);
+    }, 1800);
   };
 
   return (
@@ -355,27 +452,36 @@ export default function RoyalDoors({ onOpen, onTriggerOpenSound }: RoyalDoorsPro
         }`} 
       />
 
-      {/* Main Container with camera zoom */}
+      {/* Main Container with camera zoom and auto-viewport responsive scaling */}
       <div
-        className={`relative flex flex-col items-center justify-center transition-all duration-[3000ms] cubic-bezier(0.25, 1, 0.3, 1) filter drop-shadow-[0_20px_50px_rgba(8,47,73,0.12)] ${
-          isZooming ? "scale-[1.8] blur-md" : "scale-100"
-        }`}
+        className="relative flex flex-col items-center justify-center transition-all duration-[3000ms] cubic-bezier(0.25, 1, 0.3, 1)"
+        style={{
+          transform: isZooming 
+            ? `scale(${viewportScale * 1.85})` 
+            : `scale(${viewportScale})`,
+          filter: isZooming ? "drop-shadow(0 20px 50px rgba(8,47,73,0.12)) blur(12px)" : "drop-shadow(0 20px 50px rgba(8,47,73,0.12))",
+          transformOrigin: "center center",
+          willChange: "transform"
+        }}
       >
         {/* Elegant glassmorphic Gujarati panel */}
         <div 
-          className={`mb-8 text-center px-8 py-5 rounded-3xl bg-white/40 backdrop-blur-md border border-white/60 shadow-[0_8px_32px_0_rgba(14,165,233,0.08)] transition-all duration-1000 ${
-            isOpen ? "opacity-0 -translate-y-8" : "opacity-100 translate-y-0"
+          className={`mb-8 text-center px-8 py-5 transition-all duration-1000 ${
+            isOpen ? "opacity-0 -translate-y-8" : "opacity-100 translate-y-6 md:translate-y-8"
           }`}
         >
           {/* Upside lighting text in Gujarati */}
           <div className="mb-2.5 flex justify-center items-center">
-            <span className="relative inline-block text-sm md:text-base font-bold tracking-[0.2em] font-serif uppercase animate-pulse">
-              {/* Brilliant lighting/neon glow underlay */}
-              <span className="absolute inset-0 text-sky-400 blur-[4px] select-none text-center">
+            <span className="relative inline-block text-lg md:text-xl font-bold tracking-widest font-serif text-sky-600 animate-pulse" id="shree_ganeshay_namah_img">
+              {/* Brilliant theme lighting/neon glow underlay */}
+              <span className="absolute inset-0 text-sky-400 blur-[8px] select-none text-center">
+                શ્રી ગણેશાય નમઃ
+              </span>
+              <span className="absolute inset-0 text-sky-300 blur-[2px] select-none text-center">
                 શ્રી ગણેશાય નમઃ
               </span>
               {/* High-contrast crisp foreground text */}
-              <span className="relative text-sky-950 drop-shadow-[0_0_8px_rgba(56,189,248,0.85)]">
+              <span className="relative text-sky-950 drop-shadow-[0_2px_4px_rgba(56,189,248,0.5)]">
                 શ્રી ગણેશાય નમઃ
               </span>
             </span>
@@ -384,7 +490,7 @@ export default function RoyalDoors({ onOpen, onTriggerOpenSound }: RoyalDoorsPro
           <p className="font-cinzel text-[10px] md:text-xs tracking-[0.3em] text-sky-950 font-medium uppercase mb-1.5">
             engagement invitation
           </p>
-          <h2 className="font-serif text-2xl md:text-3.5xl text-sky-900 font-bold tracking-wide italic capitalize">
+          <h2 className="font-serif text-2xl md:text-3.5xl text-sky-950 font-bold tracking-wide italic capitalize drop-shadow-[0_0_10px_rgba(56,189,248,0.65)]">
             Delvin &amp; Siddhi
           </h2>
         </div>
@@ -396,6 +502,48 @@ export default function RoyalDoors({ onOpen, onTriggerOpenSound }: RoyalDoorsPro
           <div className="absolute -inset-4 rounded-t-[200px] border-[4px] border-[#ca8a04]/40 bg-sky-100/5 pointer-events-none shadow-[0_0_30px_rgba(56,189,248,0.15),inset_0_0_15px_rgba(212,181,102,0.15)] z-20">
             {/* Inner Golden border line */}
             <div className="absolute inset-1 rounded-t-[194px] border border-[#ca8a04]/20" />
+          </div>
+
+          {/* Inner Room/Courtyard Background (revealed behind doors) */}
+          <div 
+            className={`absolute inset-1 rounded-t-[178px] rounded-b-sm bg-gradient-to-b from-[#fbf7ec] to-[#f5edd0] transition-opacity duration-1000 z-0 ${
+              isOpen ? "opacity-100 shadow-[inset_0_0_30px_rgba(212,181,102,0.3)]" : "opacity-0"
+            } pointer-events-none`}
+          />
+
+          {/* Language Selection overlay (revealed behind doors) */}
+          <div 
+            className={`absolute inset-3 rounded-t-[174px] rounded-b-md flex flex-col items-center justify-center p-6 text-center bg-gradient-to-b from-[#e0f2fe]/95 to-[#f0f9ff]/95 backdrop-blur-[6px] shadow-[inset_0_0_30px_rgba(186,230,253,0.4),0_10px_25px_rgba(8,47,73,0.08)] border border-gold-400/30 transition-all duration-1000 z-20 ${
+              showLanguageOptions ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 translate-y-4 pointer-events-none"
+            }`}
+          >
+            <span className="font-cinzel text-[10px] md:text-xs tracking-[0.25em] text-sky-950 font-bold mb-1 uppercase text-center block">
+              WELCOME
+            </span>
+            <div className="w-16 h-[1.5px] bg-gradient-to-r from-transparent via-gold-500 to-transparent mx-auto mb-4" />
+            
+            <h3 className="font-serif text-sm md:text-base text-sky-950 italic font-semibold mb-6 leading-relaxed">
+              Select Invitation Language<br/>
+              <span className="text-xs md:text-sm font-sans tracking-wide block mt-1">આમંત્રણની ભાષા પસંદ કરો</span>
+            </h3>
+            
+            <div className="flex flex-col gap-3.5 w-full max-w-[170px] md:max-w-[200px]">
+              {/* English Button */}
+              <button
+                onClick={() => handleSelectLanguage("en")}
+                className="group relative px-6 py-2.5 rounded-full overflow-hidden border border-gold-400 bg-white hover:bg-gold-500 hover:text-white hover:border-gold-500 transition-all duration-300 font-cinzel text-xs font-bold tracking-widest shadow-md hover:shadow-lg hover:scale-105 active:scale-95 cursor-pointer text-sky-950"
+              >
+                <span className="relative z-10">English</span>
+              </button>
+              
+              {/* Gujarati Button */}
+              <button
+                onClick={() => handleSelectLanguage("gu")}
+                className="group relative px-6 py-2.5 rounded-full overflow-hidden border border-gold-400 bg-white hover:bg-gold-500 hover:text-white hover:border-gold-500 transition-all duration-300 font-serif text-sm font-bold tracking-wide shadow-md hover:shadow-lg hover:scale-105 active:scale-95 cursor-pointer text-sky-950"
+              >
+                <span className="relative z-10">ગુજરાતી</span>
+              </button>
+            </div>
           </div>
 
           {/* Light glow bursting when opening */}
@@ -410,7 +558,7 @@ export default function RoyalDoors({ onOpen, onTriggerOpenSound }: RoyalDoorsPro
             id="left_door"
             onClick={handleOpenDoors}
             className={`door-left absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-[#e0f2fe] via-[#bae6fd] to-[#f0f9ff] border-r border-[#ca8a04]/40 rounded-tl-[180px] shadow-[inset_-3px_0_12px_rgba(14,165,233,0.15)] cursor-pointer select-none overflow-hidden z-10 ${
-              isOpen ? "open" : ""
+              isOpen ? "open pointer-events-none" : ""
             }`}
           >
             {/* Elegant Double Gold Moldings & Carvings */}
@@ -450,7 +598,7 @@ export default function RoyalDoors({ onOpen, onTriggerOpenSound }: RoyalDoorsPro
             id="right_door"
             onClick={handleOpenDoors}
             className={`door-right absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#e0f2fe] via-[#bae6fd] to-[#f0f9ff] border-l border-[#ca8a04]/40 rounded-tr-[180px] shadow-[inset_3px_0_12px_rgba(14,165,233,0.15)] cursor-pointer select-none overflow-hidden z-10 ${
-              isOpen ? "open" : ""
+              isOpen ? "open pointer-events-none" : ""
             }`}
           >
             {/* Elegant Double Gold Moldings & Carvings */}
