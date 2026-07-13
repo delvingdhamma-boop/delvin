@@ -1,4 +1,4 @@
-import { Calendar, Clock, MapPin, Heart, Users, Sparkles } from "lucide-react";
+import { Calendar, Clock, MapPin, Heart, Users, Sparkles, Music, Utensils } from "lucide-react";
 import FadeUp from "./FadeUp";
 import heroImage from "../assets/images/delvin_siddhi_reference_hero_1783780196159.jpg";
 import footerImage from "../assets/images/footer_art_ds_perfect_1783782009912.jpg";
@@ -41,7 +41,37 @@ const INVITATION_CONFIG_EN = {
     brideExtended: "Brothers, Sisters & Near and Dear Ones",
     brideCompliments: "Rameshbhai Mohanbhai Kaklotar\nPravinbhai Mohanbhai Kaklotar",
   },
-  registryQuote: "To love and be loved is to feel the sun from both sides."
+  registryQuote: "To love and be loved is to feel the sun from both sides.",
+  program: [
+    {
+      time: "6:00 PM",
+      title: "Welcoming of Guests",
+      desc: "Receiving families and guests with traditional warmth and music.",
+      icon: "Users",
+      venue: "The Grand Amber Ballroom"
+    },
+    {
+      time: "6:30 PM",
+      title: "Chandla Vidhi",
+      desc: "The traditional auspicious ritual to bless the couple with custom shlokas.",
+      icon: "Sparkles",
+      venue: "The Grand Amber Ballroom"
+    },
+    {
+      time: "7:00 PM",
+      title: "The Ring Ceremony",
+      desc: "The joyful exchange of rings symbolizing eternal love and commitment.",
+      icon: "Heart",
+      venue: "The Grand Amber Ballroom"
+    },
+    {
+      time: "8:00 PM Onwards",
+      title: "Dinner & Celebration",
+      desc: "A premium banquet dinner followed by lively traditional music and dance.",
+      icon: "Utensils",
+      venue: "The Whispering Pines Garden"
+    }
+  ]
 };
 
 const INVITATION_CONFIG_GU = {
@@ -79,9 +109,38 @@ const INVITATION_CONFIG_GU = {
     brideExtended: "ભાઈઓ, બહેનો તથા સ્નેહીજનો",
     brideCompliments: "રમેશભાઈ મોહનભાઈ કાકલોતર\nપ્રવીણભાઈ મોહનભાઈ કાકલોતર",
   },
-  registryQuote: "પ્રેમ કરવો અને પ્રેમ મેળવવો એ બંને બાજુથી સૂર્યના કિરણોનો અહેસાસ કરવા જેવું છે."
+  registryQuote: "પ્રેમ કરવો અને પ્રેમ મેળવવો એ બંને બાજુથી સૂર્યના કિરણોનો અહેસાસ કરવા જેવું છે.",
+  program: [
+    {
+      time: "સાંજે ૬:૦૦ કલાકે",
+      title: "અતિથિ સ્વાગત",
+      desc: "શરણાઈના મંગલ સૂર અને પરંપરાગત આદર-સત્કાર સાથે મહેમાનોનું સ્વાગત.",
+      icon: "Users",
+      venue: "ધી ગ્રાન્ડ અંબર બોલરૂમ"
+    },
+    {
+      time: "સાંજે ૬:૩૦ કલાકે",
+      title: "ચાંદલા વિધિ",
+      desc: "કુમકુમ તિલક અને મંત્રોચ્ચાર સાથે વર-કન્યાને વધાવવાની માંગલિક વિધિ.",
+      icon: "Sparkles",
+      venue: "ધી ગ્રાન્ડ અંબર બોલરૂમ"
+    },
+    {
+      time: "સાંજે ૭:૦૦ કલાકે",
+      title: "રિંગ સેરેમની",
+      desc: "મુદ્રિકા આદાન-પ્રદાન કરી સગાઈના પવિત્ર બંધનની શરૂઆત.",
+      icon: "Heart",
+      venue: "ધી ગ્રાન્ડ અંબર બોલરૂમ"
+    },
+    {
+      time: "રાત્રે ૮:૦૦ કલાકે",
+      title: "પ્રીતિભોજન",
+      desc: "સ્વાદિષ્ટ ભોજન સમારંભ અને પરંપરાગત સંગીત-નૃત્યની રમઝટ.",
+      icon: "Utensils",
+      venue: "ધી વ્હીસ્પરિંગ પાઇન્સ ગાર્ડન"
+    }
+  ]
 };
-
 const LABELS = {
   en: {
     engagementOf: "The Engagement of",
@@ -97,7 +156,8 @@ const LABELS = {
     familyCircle: "'s Family Circle",
     bestCompliments: "With Best Compliments From",
     dearlyWelcomed: "Dearly Welcomed By",
-    celebrationDetails: "Celebration Details",
+    celebrationDetails: "Chandla Vidhi",
+    eventProgram: "Ring Ceremony",
     theDate: "The Date",
     pleaseRSVP: "Please RSVP by August 1st, 2026",
     theTime: "The Time",
@@ -127,7 +187,8 @@ const LABELS = {
     familyCircle: "નો સ્નેહી પરિવાર",
     bestCompliments: "લિ. શુભેચ્છક",
     dearlyWelcomed: "લિ. સ્નેહાધીન",
-    celebrationDetails: "મહોત્સવ વિગતો",
+    celebrationDetails: "ચાંદલા વિધિ",
+    eventProgram: "રિંગ સેરેમની",
     theDate: "તારીખ",
     pleaseRSVP: "કૃપા કરીને ૧ ઓગસ્ટ, ૨૦૨૬ સુધીમાં હાજરીની પુષ્ટિ કરો",
     theTime: "સમય",
@@ -142,6 +203,18 @@ const LABELS = {
     valetParking: "બંને ભવ્ય પ્રવેશદ્વાર પર પાર્કિંગની ઉત્તમ વ્યવસ્થા રાખેલ છે.",
     withWarmGratitude: "સ્નેહ આભાર",
     families: "ઘોઘારી અને કાકલોતર પરિવાર",
+  }
+};
+
+const getIcon = (iconName: string) => {
+  switch (iconName) {
+    case "Users": return <Users className="h-5 w-5" />;
+    case "Sparkles": return <Sparkles className="h-5 w-5" />;
+    case "Heart": return <Heart className="h-5 w-5" />;
+    case "Utensils": return <Utensils className="h-5 w-5" />;
+    case "Music": return <Music className="h-5 w-5" />;
+    case "Clock": return <Clock className="h-5 w-5" />;
+    default: return <Sparkles className="h-5 w-5" />;
   }
 };
 
@@ -458,8 +531,8 @@ export default function InvitationContent({ language = "en" }: { language?: "en"
         </div>
       </section>
 
-      {/* 4. EVENT DETAILS SECTION */}
-      <section id="details" className="relative py-24 px-4 md:px-8 bg-transparent">
+      {/* 4. EVENT DETAILS SECTION - CHANDLA VIDHI */}
+      <section id="details" className="relative py-20 px-4 md:px-8 bg-transparent">
         <div className="max-w-7xl mx-auto relative z-10">
           
           <div className="text-center mb-16">
@@ -471,48 +544,39 @@ export default function InvitationContent({ language = "en" }: { language?: "en"
             </FadeUp>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Date Card */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Date & Time Card */}
             <FadeUp delay={100} className="h-full">
               <div className="glass-card-light p-6 rounded-2xl text-center flex flex-col justify-between items-center h-full relative border border-gold-300 hover:shadow-lg transition-shadow duration-300">
                 <div className="absolute inset-1 border border-gold-200/30 rounded-xl pointer-events-none" />
-                <div className="flex flex-col items-center">
-                  <div className="mb-4 h-12 w-12 rounded-full bg-sky-100/75 flex items-center justify-center text-gold-600 border border-gold-400/30">
-                    <Calendar className="h-5 w-5" />
+                <div className="flex flex-col items-center w-full">
+                  <div className="flex gap-2 mb-4">
+                    <div className="h-11 w-11 rounded-full bg-sky-100/75 flex items-center justify-center text-gold-600 border border-gold-400/30">
+                      <Calendar className="h-5 w-5" />
+                    </div>
+                    <div className="h-11 w-11 rounded-full bg-sky-100/75 flex items-center justify-center text-gold-600 border border-gold-400/30">
+                      <Clock className="h-5 w-5" />
+                    </div>
                   </div>
                   <h4 className="font-cinzel text-xs tracking-widest text-gold-500 uppercase mb-3">
-                    {labels.theDate}
+                    {labels.theDate} & {labels.theTime}
                   </h4>
-                  <p className="font-serif text-base font-semibold text-sky-950 mb-2">
+                  <p className="font-serif text-base font-semibold text-sky-950 mb-1">
                     {config.event.dateString}
                   </p>
-                </div>
-              </div>
-            </FadeUp>
-
-            {/* Time Card */}
-            <FadeUp delay={200} className="h-full">
-              <div className="glass-card-light p-6 rounded-2xl text-center flex flex-col justify-between items-center h-full relative border border-gold-300 hover:shadow-lg transition-shadow duration-300">
-                <div className="absolute inset-1 border border-gold-200/30 rounded-xl pointer-events-none" />
-                <div className="flex flex-col items-center">
-                  <div className="mb-4 h-12 w-12 rounded-full bg-sky-100/75 flex items-center justify-center text-gold-600 border border-gold-400/30">
-                    <Clock className="h-5 w-5" />
-                  </div>
-                  <h4 className="font-cinzel text-xs tracking-widest text-gold-500 uppercase mb-3">
-                    {labels.theTime}
-                  </h4>
-                  <p className="font-serif text-base font-semibold text-sky-950 mb-2">
-                    {config.event.timeString}
+                  <div className="w-8 h-[1px] bg-gold-300/60 my-2" />
+                  <p className="font-serif text-base font-semibold text-sky-950">
+                    {language === "gu" ? "સાંજે ૬:૩૦ કલાકે" : "6:30 PM"}
                   </p>
                 </div>
               </div>
             </FadeUp>
 
             {/* Ceremony Venue Card */}
-            <FadeUp delay={300} className="h-full">
+            <FadeUp delay={200} className="h-full">
               <div className="glass-card-light p-6 rounded-2xl text-center flex flex-col justify-between items-center h-full relative border border-gold-300 hover:shadow-lg transition-shadow duration-300">
                 <div className="absolute inset-1 border border-gold-200/30 rounded-xl pointer-events-none" />
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center w-full">
                   <div className="mb-4 h-12 w-12 rounded-full bg-sky-100/75 flex items-center justify-center text-gold-600 border border-gold-400/30">
                     <MapPin className="h-5 w-5" />
                   </div>
@@ -536,27 +600,71 @@ export default function InvitationContent({ language = "en" }: { language?: "en"
                 </a>
               </div>
             </FadeUp>
+          </div>
+        </div>
+      </section>
 
-            {/* Reception Venue Card */}
-            <FadeUp delay={400} className="h-full">
+      {/* 4.5 EVENT DETAILS SECTION - RING CEREMONY */}
+      <section id="ring-ceremony-details" className="relative py-20 px-4 md:px-8 bg-sky-50/25">
+        <div className="max-w-7xl mx-auto relative z-10">
+          
+          <div className="text-center mb-16">
+            <FadeUp>
+              <h3 className="font-serif text-3xl md:text-4xl text-sky-950 font-light tracking-wide">
+                {labels.eventProgram}
+              </h3>
+              <div className="mt-3 w-12 h-[2px] bg-gold-400 mx-auto" />
+            </FadeUp>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Date & Time Card */}
+            <FadeUp delay={100} className="h-full">
               <div className="glass-card-light p-6 rounded-2xl text-center flex flex-col justify-between items-center h-full relative border border-gold-300 hover:shadow-lg transition-shadow duration-300">
                 <div className="absolute inset-1 border border-gold-200/30 rounded-xl pointer-events-none" />
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center w-full">
+                  <div className="flex gap-2 mb-4">
+                    <div className="h-11 w-11 rounded-full bg-sky-100/75 flex items-center justify-center text-gold-600 border border-gold-400/30">
+                      <Calendar className="h-5 w-5" />
+                    </div>
+                    <div className="h-11 w-11 rounded-full bg-sky-100/75 flex items-center justify-center text-gold-600 border border-gold-400/30">
+                      <Clock className="h-5 w-5" />
+                    </div>
+                  </div>
+                  <h4 className="font-cinzel text-xs tracking-widest text-gold-500 uppercase mb-3">
+                    {labels.theDate} & {labels.theTime}
+                  </h4>
+                  <p className="font-serif text-base font-semibold text-sky-950 mb-1">
+                    {config.event.dateString}
+                  </p>
+                  <div className="w-8 h-[1px] bg-gold-300/60 my-2" />
+                  <p className="font-serif text-base font-semibold text-sky-950">
+                    {language === "gu" ? "સાંજે ૭:૦૦ કલાકે" : "7:00 PM Onwards"}
+                  </p>
+                </div>
+              </div>
+            </FadeUp>
+
+            {/* Ceremony Venue Card */}
+            <FadeUp delay={200} className="h-full">
+              <div className="glass-card-light p-6 rounded-2xl text-center flex flex-col justify-between items-center h-full relative border border-gold-300 hover:shadow-lg transition-shadow duration-300">
+                <div className="absolute inset-1 border border-gold-200/30 rounded-xl pointer-events-none" />
+                <div className="flex flex-col items-center w-full">
                   <div className="mb-4 h-12 w-12 rounded-full bg-sky-100/75 flex items-center justify-center text-gold-600 border border-gold-400/30">
                     <MapPin className="h-5 w-5" />
                   </div>
                   <h4 className="font-cinzel text-xs tracking-widest text-gold-500 uppercase mb-3">
-                    {labels.receptionVenue}
+                    {labels.ceremonyVenue}
                   </h4>
                   <p className="font-serif text-sm font-semibold text-sky-950 mb-1">
-                    {config.event.venue2Name}
+                    {config.event.venue1Name}
                   </p>
                   <p className="font-sans text-[11px] text-sky-900 leading-relaxed px-2">
-                    {config.event.venue2Address}
+                    {config.event.venue1Address}
                   </p>
                 </div>
                 <a
-                  href={config.event.venue2MapDirectionsUrl}
+                  href={config.event.venue1MapDirectionsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-4 inline-flex items-center gap-2 px-4 py-1.5 border border-gold-400 rounded-full text-[10px] font-cinzel text-gold-600 bg-white hover:bg-gold-500 hover:text-white transition-colors duration-300 tracking-wider uppercase shadow-sm"
@@ -568,6 +676,9 @@ export default function InvitationContent({ language = "en" }: { language?: "en"
           </div>
         </div>
       </section>
+
+
+
       {/* 8. FOOTER SECTION */}
       <footer className="relative pt-12 pb-16 px-4 md:px-8 text-center border-t border-gold-400/20 bg-sky-50/30 overflow-hidden">
         {/* Subtle decorative background glow */}
