@@ -17,16 +17,16 @@ const INVITATION_CONFIG_EN = {
   event: {
     title: "Our Engagement Celebration",
     message: "To the lovely couple\nWishing you both a beautiful journey filled with love, happiness, and endless memories. May your bond grow stronger with each passing day, and may your life together be filled with joy, laughter, and love.",
-    dateString: "Sunday, August 23, 2026",
+    dateString: "Thursday, August 27, 2026",
     timeString: "9:00 AM Onwards",
     venue1Name: "Mahadev Party Plot",
     venue1Address: "Opp. LP Savani School, Dabholi, Surat, Gujarat 395004",
     venue1GoogleMapIframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.336!2d72.808!3d21.226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e9c70000001%3A0x8000000000000000!2sMahadev%20Party%20Plot%2C%20opp.%20LP%20savani%20school%2C%20Dabholi%2C%20Surat%2C%20Gujarat%20395004!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
     venue1MapDirectionsUrl: "https://maps.google.com/?q=Mahadev+Party+Plot+opp+LP+savani+school+Dabholi+Surat+Gujarat+395004",
-    venue2Name: "Mahadev Party Plot",
-    venue2Address: "Opp. LP Savani School, Dabholi, Surat, Gujarat 395004",
-    venue2GoogleMapIframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.336!2d72.808!3d21.226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e9c70000001%3A0x8000000000000000!2sMahadev%20Party%20Plot%2C%20opp.%20LP%20savani%20school%2C%20Dabholi%2C%20Surat%2C%20Gujarat%20395004!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
-    venue2MapDirectionsUrl: "https://maps.google.com/?q=Mahadev+Party+Plot+opp+LP+savani+school+Dabholi+Surat+Gujarat+395004",
+    venue2Name: "La Ceremonie Restaurant & Banquet",
+    venue2Address: "2nd Floor, La Ceremonie Restaurant & Banquet, Shubham K Mart, Causeway Link Rd, Sahjanand Society, Dabholi, Singanpor, Surat, Gujarat 395004",
+    venue2GoogleMapIframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.2223!2d72.8094!3d21.2265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f4c2c525555%3A0x6b802a28109337f9!2sLa%20Ceremonie%20Restaurant%20%26%20Banquet!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
+    venue2MapDirectionsUrl: "https://maps.google.com/?q=2nd+Floor,+La+Ceremonie+Restaurant+%26+Banquet,+Shubham+K+Mart,+Causeway+Link+Rd,+Sahjanand+Society,+Dabholi,+Singanpor,+Surat,+Gujarat+395004",
   },
   images: {
     hero: heroImage,
@@ -85,16 +85,16 @@ const INVITATION_CONFIG_GU = {
   event: {
     title: "અમારો સગાઈ મહોત્સવ",
     message: "સ્નેહી દંપતીને\nતમારા બંનેની આ સુંદર સગાઈ સફર સ્નેહ, સુખ અને અવિસ્મરણીય સ્મૃતિઓથી ભરેલી રહે તેવી હાર્દિક શુભકામનાઓ. આપનો આ પવિત્ર સ્નેહ સંબંધ દિન-પ્રતિદિન વધુ ગાઢ બને અને આપનું સહજીવન હર્ષ, ઉલ્લાસ અને અનંત પ્રેમથી હર્યું-ભર્યું રહે.",
-    dateString: "રવિવાર, ૨૩ ઓગસ્ટ ૨૦૨૬",
+    dateString: "ગુરુવાર, ૨૭ ઓગસ્ટ ૨૦૨૬",
     timeString: "સવારે ૯:૦૦ વાગ્યાથી",
     venue1Name: "મહાદેવ પાર્ટી પ્લોટ",
     venue1Address: "એલ. પી. સવાણી સ્કૂલ સામે, ડભોલી, સુરત, ગુજરાત ૩૯૫૦૦૪",
     venue1GoogleMapIframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.336!2d72.808!3d21.226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e9c70000001%3A0x8000000000000000!2sMahadev%20Party%20Plot%2C%20opp.%20LP%20savani%20school%2C%20Dabholi%2C%20Surat%2C%20Gujarat%20395004!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
     venue1MapDirectionsUrl: "https://maps.google.com/?q=Mahadev+Party+Plot+opp+LP+savani+school+Dabholi+Surat+Gujarat+395004",
-    venue2Name: "મહાદેવ પાર્ટી પ્લોટ",
-    venue2Address: "એલ. પી. સવાણી સ્કૂલ સામે, ડભોલી, સુરત, ગુજરાત ૩૯૫૦૦૪",
-    venue2GoogleMapIframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.336!2d72.808!3d21.226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e9c70000001%3A0x8000000000000000!2sMahadev%20Party%20Plot%2C%20opp.%20LP%20savani%20school%2C%20Dabholi%2C%20Surat%2C%20Gujarat%20395004!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
-    venue2MapDirectionsUrl: "https://maps.google.com/?q=Mahadev+Party+Plot+opp+LP+savani+school+Dabholi+Surat+Gujarat+395004",
+    venue2Name: "લા સિરોમની રેસ્ટોરન્ટ એન્ડ બેન્ક્વેટ",
+    venue2Address: "૨જો માળ, લા સિરોમની રેસ્ટોરન્ટ એન્ડ બેન્ક્વેટ, શુભમ કે માર્ટ, કોઝવે લિંક રોડ, સહજાનંદ સોસાયટી, ડભોલી, સિંગણપોર, સુરત, ગુજરાત ૩૯૫૦૦૪",
+    venue2GoogleMapIframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.2223!2d72.8094!3d21.2265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f4c2c525555%3A0x6b802a28109337f9!2sLa%20Ceremonie%20Restaurant%20%26%20Banquet!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
+    venue2MapDirectionsUrl: "https://maps.google.com/?q=2nd+Floor,+La+Ceremonie+Restaurant+%26+Banquet,+Shubham+K+Mart,+Causeway+Link+Rd,+Sahjanand+Society,+Dabholi,+Singanpor,+Surat,+Gujarat+395004",
   },
   images: {
     hero: heroImage,
@@ -658,14 +658,14 @@ export default function InvitationContent({ language = "en" }: { language?: "en"
                     {labels.ceremonyVenue}
                   </h4>
                   <p className="font-serif text-sm font-semibold text-sky-950 mb-1">
-                    {config.event.venue1Name}
+                    {config.event.venue2Name}
                   </p>
                   <p className="font-sans text-[11px] text-sky-900 leading-relaxed px-2">
-                    {config.event.venue1Address}
+                    {config.event.venue2Address}
                   </p>
                 </div>
                 <a
-                  href={config.event.venue1MapDirectionsUrl}
+                  href={config.event.venue2MapDirectionsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-4 inline-flex items-center gap-2 px-4 py-1.5 border border-gold-400 rounded-full text-[10px] font-cinzel text-gold-600 bg-white hover:bg-gold-500 hover:text-white transition-colors duration-300 tracking-wider uppercase shadow-sm"
