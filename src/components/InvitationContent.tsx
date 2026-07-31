@@ -17,59 +17,59 @@ const INVITATION_CONFIG_EN = {
   event: {
     title: "Our Engagement Celebration",
     message: "To the lovely couple\nWishing you both a beautiful journey filled with love, happiness, and endless memories. May your bond grow stronger with each passing day, and may your life together be filled with joy, laughter, and love.",
-    dateString: "Friday, August 14, 2026",
-    timeString: "6:00 PM Onwards",
-    venue1Name: "The Grand Amber Ballroom",
-    venue1Address: "Royal Orchard Estate, 1045 Amber Wood Dr, Beverly Hills, CA 90210",
-    venue1GoogleMapIframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3302.2619472626895!2d-118.4239853!3d34.0883832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bc0511855555%3A0x6e2c39a8beeb2e5f!2sBeverly%20Hills%2C%20CA%2090210!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus",
-    venue1MapDirectionsUrl: "https://maps.google.com/?q=Beverly+Hills+CA+90210",
-    venue2Name: "The Whispering Pines Garden",
-    venue2Address: "Pinecrest Valley Resort, 2088 Whispering Pines Rd, Malibu, CA 90265",
-    venue2GoogleMapIframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.626788533887!2d-118.7999812!3d34.0259218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82012c40c867b%3A0x1c8b3d6874a169b1!2sMalibu%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus",
-    venue2MapDirectionsUrl: "https://maps.google.com/?q=Malibu+CA",
+    dateString: "Sunday, August 23, 2026",
+    timeString: "9:00 AM Onwards",
+    venue1Name: "Mahadev Party Plot",
+    venue1Address: "Opp. LP Savani School, Dabholi, Surat, Gujarat 395004",
+    venue1GoogleMapIframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.336!2d72.808!3d21.226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e9c70000001%3A0x8000000000000000!2sMahadev%20Party%20Plot%2C%20opp.%20LP%20savani%20school%2C%20Dabholi%2C%20Surat%2C%20Gujarat%20395004!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
+    venue1MapDirectionsUrl: "https://maps.google.com/?q=Mahadev+Party+Plot+opp+LP+savani+school+Dabholi+Surat+Gujarat+395004",
+    venue2Name: "Mahadev Party Plot",
+    venue2Address: "Opp. LP Savani School, Dabholi, Surat, Gujarat 395004",
+    venue2GoogleMapIframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.336!2d72.808!3d21.226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e9c70000001%3A0x8000000000000000!2sMahadev%20Party%20Plot%2C%20opp.%20LP%20savani%20school%2C%20Dabholi%2C%20Surat%2C%20Gujarat%20395004!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
+    venue2MapDirectionsUrl: "https://maps.google.com/?q=Mahadev+Party+Plot+opp+LP+savani+school+Dabholi+Surat+Gujarat+395004",
   },
   images: {
     hero: heroImage,
   },
   family: {
     groomParents: "Rameshbhai Dharamshibhai Ghoghari & Arunaben Rameshbhai Ghoghari",
-    groomGrandparents: "Shree Dharamshibhai Veljibhai Ghoghari & Late. Panbaiben Dharmshibhai Ghoghari",
-    groomExtended: "Brothers, Sisters & Near and Dear Ones",
-    groomCompliments: "Pareshbhai Dharamshibhai Ghoghari\nAlpeshbhai Dharamshibhai Ghoghari",
+    groomGrandparents: "Shree Dharamshibhai Veljibhai Ghoghari & Late. Panbaiben Dharmshibhai Ghoghari\nShree Vallabhbhai Veljibhai Ghoghari & Shree Manjulaben Vallabhbhai Ghoghari",
+    groomExtended: "Jenex, Khushal, Diptanshu, Swency, Krisha, Arushi, Frenisha",
+    groomCompliments: "Pareshbhai Dharamshibhai Ghoghari & Daxaben Pareshbhai Ghoghari\nAlpeshbhai Dharamshibhai Ghoghari & Mitalben Alpeshbhai Ghoghari",
     brideParents: "Dilipbhai Mohanbhai Kaklotar & Illaben Dilipbhai Kaklotar",
     brideGrandparents: "Late. Mohanbhai Pragjibhai Kaklotar & Parvatiben Mohanbhai Kaklotar",
-    brideExtended: "Brothers, Sisters & Near and Dear Ones",
-    brideCompliments: "Rameshbhai Mohanbhai Kaklotar\nPravinbhai Mohanbhai Kaklotar",
+    brideExtended: "Dhiraj - Shruti, Harsh, Naitik, Dipasha, Khushbu, Khushali, Mansi",
+    brideCompliments: "Rameshbhai Mohanbhai Kaklotar & Hansaben Rameshbhai Kaklotar\nPravinbhai Mohanbhai Kaklotar & Joshnaben Pravinbhai Kaklotar",
   },
   registryQuote: "To love and be loved is to feel the sun from both sides.",
   program: [
     {
-      time: "6:00 PM",
+      time: "9:00 AM",
       title: "Welcoming of Guests",
       desc: "Receiving families and guests with traditional warmth and music.",
       icon: "Users",
-      venue: "The Grand Amber Ballroom"
+      venue: "Mahadev Party Plot"
     },
     {
-      time: "6:30 PM",
+      time: "9:30 AM",
       title: "Chandla Vidhi",
       desc: "The traditional auspicious ritual to bless the couple with custom shlokas.",
       icon: "Sparkles",
-      venue: "The Grand Amber Ballroom"
+      venue: "Mahadev Party Plot"
     },
     {
-      time: "7:00 PM",
+      time: "10:00 AM",
       title: "The Ring Ceremony",
       desc: "The joyful exchange of rings symbolizing eternal love and commitment.",
       icon: "Heart",
-      venue: "The Grand Amber Ballroom"
+      venue: "Mahadev Party Plot"
     },
     {
-      time: "8:00 PM Onwards",
-      title: "Dinner & Celebration",
-      desc: "A premium banquet dinner followed by lively traditional music and dance.",
+      time: "11:30 AM Onwards",
+      title: "Lunch & Celebration",
+      desc: "A premium banquet lunch followed by lively traditional music and dance.",
       icon: "Utensils",
-      venue: "The Whispering Pines Garden"
+      venue: "Mahadev Party Plot"
     }
   ]
 };
@@ -85,62 +85,63 @@ const INVITATION_CONFIG_GU = {
   event: {
     title: "અમારો સગાઈ મહોત્સવ",
     message: "સ્નેહી દંપતીને\nતમારા બંનેની આ સુંદર સગાઈ સફર સ્નેહ, સુખ અને અવિસ્મરણીય સ્મૃતિઓથી ભરેલી રહે તેવી હાર્દિક શુભકામનાઓ. આપનો આ પવિત્ર સ્નેહ સંબંધ દિન-પ્રતિદિન વધુ ગાઢ બને અને આપનું સહજીવન હર્ષ, ઉલ્લાસ અને અનંત પ્રેમથી હર્યું-ભર્યું રહે.",
-    dateString: "શુક્રવાર, ૧૪ ઓગસ્ટ ૨૦૨૬",
-    timeString: "સાંજે ૬:૦૦ વાગ્યાથી",
-    venue1Name: "ધી ગ્રાન્ડ અંબર બોલરૂમ",
-    venue1Address: "રોયલ ઓર્કાર્ડ એસ્ટેટ, ૧૦૪૫ અંબર વુડ ડ્રાઇવ, બેવર્લી હિલ્સ, સીએ ૯૦૨૧૦",
-    venue1GoogleMapIframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3302.2619472626895!2d-118.4239853!3d34.0883832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bc0511855555%3A0x6e2c39a8beeb2e5f!2sBeverly%20Hills%2C%20CA%2090210!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus",
-    venue1MapDirectionsUrl: "https://maps.google.com/?q=Beverly+Hills+CA+90210",
-    venue2Name: "ધી વ્હીસ્પરિંગ પાઇન્સ ગાર્ડન",
-    venue2Address: "પાઇનક્રેસ્ટ વેલી રિસોર્ટ, ૨૦૮૮ વ્હીસ્પરિંગ પાઇન્સ રોડ, માલિબુ, સીએ ૯૦૨૬૫",
-    venue2GoogleMapIframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.626788533887!2d-118.7999812!3d34.0259218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82012c40c867b%3A0x1c8b3d6874a169b1!2sMalibu%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus",
-    venue2MapDirectionsUrl: "https://maps.google.com/?q=Malibu+CA",
+    dateString: "રવિવાર, ૨૩ ઓગસ્ટ ૨૦૨૬",
+    timeString: "સવારે ૯:૦૦ વાગ્યાથી",
+    venue1Name: "મહાદેવ પાર્ટી પ્લોટ",
+    venue1Address: "એલ. પી. સવાણી સ્કૂલ સામે, ડભોલી, સુરત, ગુજરાત ૩૯૫૦૦૪",
+    venue1GoogleMapIframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.336!2d72.808!3d21.226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e9c70000001%3A0x8000000000000000!2sMahadev%20Party%20Plot%2C%20opp.%20LP%20savani%20school%2C%20Dabholi%2C%20Surat%2C%20Gujarat%20395004!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
+    venue1MapDirectionsUrl: "https://maps.google.com/?q=Mahadev+Party+Plot+opp+LP+savani+school+Dabholi+Surat+Gujarat+395004",
+    venue2Name: "મહાદેવ પાર્ટી પ્લોટ",
+    venue2Address: "એલ. પી. સવાણી સ્કૂલ સામે, ડભોલી, સુરત, ગુજરાત ૩૯૫૦૦૪",
+    venue2GoogleMapIframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.336!2d72.808!3d21.226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e9c70000001%3A0x8000000000000000!2sMahadev%20Party%20Plot%2C%20opp.%20LP%20savani%20school%2C%20Dabholi%2C%20Surat%2C%20Gujarat%20395004!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
+    venue2MapDirectionsUrl: "https://maps.google.com/?q=Mahadev+Party+Plot+opp+LP+savani+school+Dabholi+Surat+Gujarat+395004",
   },
   images: {
     hero: heroImage,
   },
   family: {
     groomParents: "રમેશભાઈ ધરમશીભાઈ ઘોઘારી અને અરુણાબેન રમેશભાઈ ઘોઘારી",
-    groomGrandparents: "શ્રી ધરમશીભાઈ વેલજીભાઈ ઘોઘારી અને સ્વ. પાનબાઈબેન ધરમશીભાઈ ઘોઘારી",
-    groomExtended: "ભાઈઓ, બહેનો તથા સ્નેહીજનો",
-    groomCompliments: "પરેશભાઈ ધરમશીભાઈ ઘોઘારી\nઅલ્પેશભાઈ ધરમશીભાઈ ઘોઘારી",
+    groomGrandparents: "શ્રી ધરમશીભાઈ વેલજીભાઈ ઘોઘારી અને સ્વ. પાનબાઈબેન ધરમશીભાઈ ઘોઘારી\nશ્રી વલ્લભભાઈ વેલજીભાઈ ઘોઘારી અને શ્રીમતી મંજુલાબેન વલ્લભભાઈ ઘોઘારી",
+    groomExtended: "જેનેક્સ, ખુશાલ, દિપ્તાંશુ, સ્વેન્સી, ક્રિશા, આરુષી, ફ્રેનિશા",
+    groomCompliments: "પરેશભાઈ ધરમશીભાઈ ઘોઘારી અને દક્ષાબેન પરેશભાઈ ઘોઘારી\nઅલ્પેશભાઈ ધરમશીભાઈ ઘોઘારી અને મિતલબેન અલ્પેશભાઈ ઘોઘારી",
     brideParents: "દિલીપભાઈ મોહનભાઈ કાકલોતર અને ઇલાબેન દિલીપભાઈ કાકલોતર",
     brideGrandparents: "સ્વ. મોહનભાઈ પ્રાગજીભાઈ કાકલોતર અને પાર્વતીબેન મોહનભાઈ કાકલોતર",
-    brideExtended: "ભાઈઓ, બહેનો તથા સ્નેહીજનો",
-    brideCompliments: "રમેશભાઈ મોહનભાઈ કાકલોતર\nપ્રવીણભાઈ મોહનભાઈ કાકલોતર",
+    brideExtended: "ધીરજ - શ્રુતિ, હર્ષ, નૈતિક, દિપાશા, ખુશબુ, ખુશાલી, માનસી",
+    brideCompliments: "રમેશભાઈ મોહનભાઈ કાકલોતર અને હંસાબેન રમેશભાઈ કાકલોતર\nપ્રવીણભાઈ મોહનભાઈ કાકલોતર અને જોશનાબેન પ્રવીણભાઈ કાકલોતર",
   },
   registryQuote: "પ્રેમ કરવો અને પ્રેમ મેળવવો એ બંને બાજુથી સૂર્યના કિરણોનો અહેસાસ કરવા જેવું છે.",
   program: [
     {
-      time: "સાંજે ૬:૦૦ કલાકે",
+      time: "સવારે ૯:૦૦ કલાકે",
       title: "અતિથિ સ્વાગત",
       desc: "શરણાઈના મંગલ સૂર અને પરંપરાગત આદર-સત્કાર સાથે મહેમાનોનું સ્વાગત.",
       icon: "Users",
-      venue: "ધી ગ્રાન્ડ અંબર બોલરૂમ"
+      venue: "મહાદેવ પાર્ટી પ્લોટ"
     },
     {
-      time: "સાંજે ૬:૩૦ કલાકે",
+      time: "સવારે ૯:૩૦ કલાકે",
       title: "ચાંદલા વિધિ",
       desc: "કુમકુમ તિલક અને મંત્રોચ્ચાર સાથે વર-કન્યાને વધાવવાની માંગલિક વિધિ.",
       icon: "Sparkles",
-      venue: "ધી ગ્રાન્ડ અંબર બોલરૂમ"
+      venue: "મહાદેવ પાર્ટી પ્લોટ"
     },
     {
-      time: "સાંજે ૭:૦૦ કલાકે",
+      time: "સવારે ૧૦:૦૦ કલાકે",
       title: "રિંગ સેરેમની",
       desc: "મુદ્રિકા આદાન-પ્રદાન કરી સગાઈના પવિત્ર બંધનની શરૂઆત.",
       icon: "Heart",
-      venue: "ધી ગ્રાન્ડ અંબર બોલરૂમ"
+      venue: "મહાદેવ પાર્ટી પ્લોટ"
     },
     {
-      time: "રાત્રે ૮:૦૦ કલાકે",
+      time: "બપોરે ૧૧:૩૦ કલાકે",
       title: "પ્રીતિભોજન",
       desc: "સ્વાદિષ્ટ ભોજન સમારંભ અને પરંપરાગત સંગીત-નૃત્યની રમઝટ.",
       icon: "Utensils",
-      venue: "ધી વ્હીસ્પરિંગ પાઇન્સ ગાર્ડન"
+      venue: "મહાદેવ પાર્ટી પ્લોટ"
     }
   ]
 };
+
 const LABELS = {
   en: {
     engagementOf: "The Engagement of",
@@ -286,7 +287,7 @@ export default function InvitationContent({ language = "en" }: { language?: "en"
           <p className={`text-xs md:text-sm text-sky-900 drop-shadow-[0_1px_2px_rgba(255,255,255,0.6)] max-w-md mx-auto mb-8 font-semibold ${
             language === "gu" ? "font-sans tracking-normal" : "font-cinzel tracking-[0.3em] uppercase"
           }`}>
-            {language === "gu" ? "૧૪ ઓગસ્ટ ૨૦૨૬" : "14 August 2026"}
+            {language === "gu" ? "૨૩ ઓગસ્ટ ૨૦૨૬" : "23 August 2026"}
           </p>
 
           {/* Hero Couple Photo within a Premium Double Gold-Border Arch Frame */}
@@ -389,7 +390,7 @@ export default function InvitationContent({ language = "en" }: { language?: "en"
                         }`}>
                           {labels.lovingGrandparents}
                         </p>
-                        <p className="font-serif text-xs md:text-sm text-sky-950 italic">
+                        <p className="font-serif text-xs md:text-sm text-sky-950 italic whitespace-pre-line">
                           {config.family.groomGrandparents}
                         </p>
                       </div>
@@ -432,7 +433,7 @@ export default function InvitationContent({ language = "en" }: { language?: "en"
                         }`}>
                           {labels.dearlyWelcomed}
                         </p>
-                        <p className="font-serif text-xs md:text-sm text-sky-950 italic">
+                        <p className="font-serif text-xs md:text-sm text-sky-950 italic whitespace-pre-line">
                           {config.family.groomExtended}
                         </p>
                       </div>
@@ -475,7 +476,7 @@ export default function InvitationContent({ language = "en" }: { language?: "en"
                         }`}>
                           {labels.lovingGrandparents}
                         </p>
-                        <p className="font-serif text-xs md:text-sm text-sky-950 italic">
+                        <p className="font-serif text-xs md:text-sm text-sky-950 italic whitespace-pre-line">
                           {config.family.brideGrandparents}
                         </p>
                       </div>
@@ -518,7 +519,7 @@ export default function InvitationContent({ language = "en" }: { language?: "en"
                         }`}>
                           {labels.dearlyWelcomed}
                         </p>
-                        <p className="font-serif text-xs md:text-sm text-sky-950 italic">
+                        <p className="font-serif text-xs md:text-sm text-sky-950 italic whitespace-pre-line">
                           {config.family.brideExtended}
                         </p>
                       </div>
@@ -566,7 +567,7 @@ export default function InvitationContent({ language = "en" }: { language?: "en"
                   </p>
                   <div className="w-8 h-[1px] bg-gold-300/60 my-2" />
                   <p className="font-serif text-base font-semibold text-sky-950">
-                    {language === "gu" ? "સાંજે ૬:૩૦ કલાકે" : "6:30 PM"}
+                    {config.event.timeString}
                   </p>
                 </div>
               </div>
@@ -639,7 +640,7 @@ export default function InvitationContent({ language = "en" }: { language?: "en"
                   </p>
                   <div className="w-8 h-[1px] bg-gold-300/60 my-2" />
                   <p className="font-serif text-base font-semibold text-sky-950">
-                    {language === "gu" ? "સાંજે ૭:૦૦ કલાકે" : "7:00 PM Onwards"}
+                    {config.event.timeString}
                   </p>
                 </div>
               </div>
