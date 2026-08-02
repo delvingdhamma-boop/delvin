@@ -41,7 +41,7 @@ const INVITATION_CONFIG_EN = {
     brideParents: "Dilipbhai Mohanbhai Kaklotar & Illaben Dilipbhai Kaklotar",
     brideGrandparents: "Late. Mohanbhai Pragjibhai Kaklotar & Parvatiben Mohanbhai Kaklotar",
     brideExtended: "Dipasha, Naitik, Dhiraj - Shruti, Mansi, Harsh, Khushbu, Khushali",
-    brideCompliments: "Rameshbhai Mohanbhai Kaklotar & Hansaben Rameshbhai Kaklotar\nPravinbhai Mohanbhai Kaklotar & Joshnaben Pravinbhai Kaklotar",
+    brideCompliments: "Rameshbhai Mohanbhai Kaklotar & Hansaben Rameshbhai Kaklotar\nPravinbhai Mohanbhai Kaklotar & Jyotsnaben Pravinbhai Kaklotar",
   },
   registryQuote: "To love and be loved is to feel the sun from both sides.",
   program: [
@@ -111,7 +111,7 @@ const INVITATION_CONFIG_GU = {
     brideParents: "દિલીપભાઈ મોહનભાઈ કાકલોતર અને ઇલાબેન દિલીપભાઈ કાકલોતર",
     brideGrandparents: "સ્વ. મોહનભાઈ પ્રાગજીભાઈ કાકલોતર અને પાર્વતીબેન મોહનભાઈ કાકલોતર",
     brideExtended: "દિપાશા, નૈતિક, ધીરજ - શ્રુતિ, માનસી, હર્ષ, ખુશબુ, ખુશાલી",
-    brideCompliments: "રમેશભાઈ મોહનભાઈ કાકલોતર અને હંસાબેન રમેશભાઈ કાકલોતર\nપ્રવીણભાઈ મોહનભાઈ કાકલોતર અને જોશનાબેન પ્રવીણભાઈ કાકલોતર",
+    brideCompliments: "રમેશભાઈ મોહનભાઈ કાકલોતર અને હંસાબેન રમેશભાઈ કાકલોતર\nપ્રવીણભાઈ મોહનભાઈ કાકલોતર અને જ્યોત્સનાબેન પ્રવીણભાઈ કાકલોતર",
   },
   registryQuote: "પ્રેમ કરવો અને પ્રેમ મેળવવો એ બંને બાજુથી સૂર્યના કિરણોનો અહેસાસ કરવા જેવું છે.",
   program: [
