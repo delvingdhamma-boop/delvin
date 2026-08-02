@@ -17,7 +17,8 @@ const INVITATION_CONFIG_EN = {
   event: {
     title: "Our Engagement Celebration",
     message: "To the lovely couple\nWishing you both a beautiful journey filled with love, happiness, and endless memories. May your bond grow stronger with each passing day, and may your life together be filled with joy, laughter, and love.",
-    dateString: "Thursday, August 27, 2026",
+    dateString: "Sunday, August 23, 2026",
+    ringCeremonyDateString: "Thursday, August 27, 2026",
     timeString: "9:00 AM Onwards",
     ringCeremonyTimeString: "6:00 PM Onwards",
     venue1Name: "Mahadev Party Plot",
@@ -35,7 +36,7 @@ const INVITATION_CONFIG_EN = {
   family: {
     groomParents: "Rameshbhai Dharamshibhai Ghoghari & Arunaben Rameshbhai Ghoghari",
     groomGrandparents: "Shree Dharamshibhai Veljibhai Ghoghari & Late. Panbaiben Dharmshibhai Ghoghari\nShree Vallabhbhai Veljibhai Ghoghari & Shree Manjulaben Vallabhbhai Ghoghari",
-    groomExtended: "Jenex, Rudra, Diptanshu, Swency, Krisha, Aarushi, Frenisha",
+    groomExtended: "Jenex, Rudra, Diptanshu, Swency, Krisha, Aarushi, Fenisha",
     groomCompliments: "Pareshbhai Dharamshibhai Ghoghari & Daxaben Pareshbhai Ghoghari\nAlpeshbhai Dharamshibhai Ghoghari & Mitalben Alpeshbhai Ghoghari",
     brideParents: "Dilipbhai Mohanbhai Kaklotar & Illaben Dilipbhai Kaklotar",
     brideGrandparents: "Late. Mohanbhai Pragjibhai Kaklotar & Parvatiben Mohanbhai Kaklotar",
@@ -86,7 +87,8 @@ const INVITATION_CONFIG_GU = {
   event: {
     title: "અમારી સગાઈ",
     message: "સ્નેહી દંપતીને\nતમારા બંનેની આ સુંદર સગાઈ સફર સ્નેહ, સુખ અને અવિસ્મરણીય સ્મૃતિઓથી ભરેલી રહે તેવી હાર્દિક શુભકામનાઓ. આપનો આ પવિત્ર સ્નેહ સંબંધ દિન-પ્રતિદિન વધુ ગાઢ બને અને આપનું સહજીવન હર્ષ, ઉલ્લાસ અને અનંત પ્રેમથી હર્યું-ભર્યું રહે.",
-    dateString: "ગુરુવાર, ૨૭ ઓગસ્ટ ૨૦૨૬",
+    dateString: "રવિવાર, ૨૩ ઓગસ્ટ ૨૦૨૬",
+    ringCeremonyDateString: "ગુરુવાર, ૨૭ ઓગસ્ટ ૨૦૨૬",
     timeString: "સવારે ૯:૦૦ વાગ્યાથી",
     ringCeremonyTimeString: "સાંજે ૬:૦૦ વાગ્યાથી",
     venue1Name: "મહાદેવ પાર્ટી પ્લોટ",
@@ -104,7 +106,7 @@ const INVITATION_CONFIG_GU = {
   family: {
     groomParents: "રમેશભાઈ ધરમશીભાઈ ઘોઘારી અને અરુણાબેન રમેશભાઈ ઘોઘારી",
     groomGrandparents: "શ્રી ધરમશીભાઈ વેલજીભાઈ ઘોઘારી અને સ્વ. પાનબાઈબેન ધરમશીભાઈ ઘોઘારી\nશ્રી વલ્લભભાઈ વેલજીભાઈ ઘોઘારી અને શ્રીમતી મંજુલાબેન વલ્લભભાઈ ઘોઘારી",
-    groomExtended: "જેનેક્ષ, રુદ્ર, દિપ્તાંશુ, સ્વેન્સી, ક્રિશા, આરૂષી, ફ્રેનિશા",
+    groomExtended: "જેનેક્ષ, રુદ્ર, દિપ્તાંશુ, સ્વેન્સી, ક્રિશા, આરૂષી, ફેનિશા",
     groomCompliments: "પરેશભાઈ ધરમશીભાઈ ઘોઘારી અને દક્ષાબેન પરેશભાઈ ઘોઘારી\nઅલ્પેશભાઈ ધરમશીભાઈ ઘોઘારી અને મિતલબેન અલ્પેશભાઈ ઘોઘારી",
     brideParents: "દિલીપભાઈ મોહનભાઈ કાકલોતર અને ઇલાબેન દિલીપભાઈ કાકલોતર",
     brideGrandparents: "સ્વ. મોહનભાઈ પ્રાગજીભાઈ કાકલોતર અને પાર્વતીબેન મોહનભાઈ કાકલોતર",
@@ -638,7 +640,7 @@ export default function InvitationContent({ language = "en" }: { language?: "en"
                     {labels.theDate} & {labels.theTime}
                   </h4>
                   <p className="font-serif text-base font-semibold text-sky-950 mb-1">
-                    {config.event.dateString}
+                    {config.event.ringCeremonyDateString || config.event.dateString}
                   </p>
                   <div className="w-8 h-[1px] bg-gold-300/60 my-2" />
                   <p className="font-serif text-base font-semibold text-sky-950">
