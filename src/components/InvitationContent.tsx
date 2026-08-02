@@ -81,7 +81,7 @@ const INVITATION_CONFIG_GU = {
     groom: "ડેલ્વિન",
     groomShort: "ડેલ્વિન",
     brideShort: "સિદ્ધિ",
-    title: "ડેલ્વિન અને સિદ્ધિ",
+    title: "ડેલ્વિન & સિદ્ધિ",
   },
   event: {
     title: "અમારી સગાઈ",
