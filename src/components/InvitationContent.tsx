@@ -35,7 +35,7 @@ const INVITATION_CONFIG_EN = {
   family: {
     groomParents: "Rameshbhai Dharamshibhai Ghoghari & Arunaben Rameshbhai Ghoghari",
     groomGrandparents: "Shree Dharamshibhai Veljibhai Ghoghari & Late. Panbaiben Dharmshibhai Ghoghari\nShree Vallabhbhai Veljibhai Ghoghari & Shree Manjulaben Vallabhbhai Ghoghari",
-    groomExtended: "Jenex, Rudra, Diptanshu, Swency, Krisha, Arushi, Frenisha",
+    groomExtended: "Jenex, Rudra, Diptanshu, Swency, Krisha, Aarushi, Frenisha",
     groomCompliments: "Pareshbhai Dharamshibhai Ghoghari & Daxaben Pareshbhai Ghoghari\nAlpeshbhai Dharamshibhai Ghoghari & Mitalben Alpeshbhai Ghoghari",
     brideParents: "Dilipbhai Mohanbhai Kaklotar & Illaben Dilipbhai Kaklotar",
     brideGrandparents: "Late. Mohanbhai Pragjibhai Kaklotar & Parvatiben Mohanbhai Kaklotar",
