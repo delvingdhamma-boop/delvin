@@ -35,7 +35,7 @@ const INVITATION_CONFIG_EN = {
   family: {
     groomParents: "Rameshbhai Dharamshibhai Ghoghari & Arunaben Rameshbhai Ghoghari",
     groomGrandparents: "Shree Dharamshibhai Veljibhai Ghoghari & Late. Panbaiben Dharmshibhai Ghoghari\nShree Vallabhbhai Veljibhai Ghoghari & Shree Manjulaben Vallabhbhai Ghoghari",
-    groomExtended: "Jenex, Khushal, Diptanshu, Swency, Krisha, Arushi, Frenisha",
+    groomExtended: "Jenex, Rudra, Diptanshu, Swency, Krisha, Arushi, Frenisha",
     groomCompliments: "Pareshbhai Dharamshibhai Ghoghari & Daxaben Pareshbhai Ghoghari\nAlpeshbhai Dharamshibhai Ghoghari & Mitalben Alpeshbhai Ghoghari",
     brideParents: "Dilipbhai Mohanbhai Kaklotar & Illaben Dilipbhai Kaklotar",
     brideGrandparents: "Late. Mohanbhai Pragjibhai Kaklotar & Parvatiben Mohanbhai Kaklotar",
@@ -84,7 +84,7 @@ const INVITATION_CONFIG_GU = {
     title: "ડેલ્વિન અને સિદ્ધિ",
   },
   event: {
-    title: "અમારો સગાઈ મહોત્સવ",
+    title: "અમારી સગાઈ",
     message: "સ્નેહી દંપતીને\nતમારા બંનેની આ સુંદર સગાઈ સફર સ્નેહ, સુખ અને અવિસ્મરણીય સ્મૃતિઓથી ભરેલી રહે તેવી હાર્દિક શુભકામનાઓ. આપનો આ પવિત્ર સ્નેહ સંબંધ દિન-પ્રતિદિન વધુ ગાઢ બને અને આપનું સહજીવન હર્ષ, ઉલ્લાસ અને અનંત પ્રેમથી હર્યું-ભર્યું રહે.",
     dateString: "ગુરુવાર, ૨૭ ઓગસ્ટ ૨૦૨૬",
     timeString: "સવારે ૯:૦૦ વાગ્યાથી",
@@ -94,7 +94,7 @@ const INVITATION_CONFIG_GU = {
     venue1GoogleMapIframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.336!2d72.808!3d21.226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e9c70000001%3A0x8000000000000000!2sMahadev%20Party%20Plot%2C%20opp.%20LP%20savani%20school%2C%20Dabholi%2C%20Surat%2C%20Gujarat%20395004!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
     venue1MapDirectionsUrl: "https://maps.google.com/?q=Mahadev+Party+Plot+opp+LP+savani+school+Dabholi+Surat+Gujarat+395004",
     venue2Name: "લા સિરોમની રેસ્ટોરન્ટ એન્ડ બેન્ક્વેટ",
-    venue2Address: "૨જો માળ, લા સિરોમની રેસ્ટોરન્ટ એન્ડ બેન્ક્વેટ, શુભમ કે માર્ટ, કોઝવે લિંક રોડ, સહજાનંદ સોસાયટી, ડભોલી, સિંગણપોર, સુરત, ગુજરાત ૩૯૫૦૦૪",
+    venue2Address: "બીજો માળ, લા સિરોમની રેસ્ટોરન્ટ એન્ડ બેન્ક્વેટ, શુભમ કે માર્ટ, કોઝવે લિંક રોડ, સહજાનંદ સોસાયટી, ડભોલી, સિંગણપોર, સુરત, ગુજરાત ૩૯૫૦૦૪",
     venue2GoogleMapIframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.2223!2d72.8094!3d21.2265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f4c2c525555%3A0x6b802a28109337f9!2sLa%20Ceremonie%20Restaurant%20%26%20Banquet!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
     venue2MapDirectionsUrl: "https://maps.google.com/?q=2nd+Floor,+La+Ceremonie+Restaurant+%26+Banquet,+Shubham+K+Mart,+Causeway+Link+Rd,+Sahjanand+Society,+Dabholi,+Singanpor,+Surat,+Gujarat+395004",
   },
@@ -104,7 +104,7 @@ const INVITATION_CONFIG_GU = {
   family: {
     groomParents: "રમેશભાઈ ધરમશીભાઈ ઘોઘારી અને અરુણાબેન રમેશભાઈ ઘોઘારી",
     groomGrandparents: "શ્રી ધરમશીભાઈ વેલજીભાઈ ઘોઘારી અને સ્વ. પાનબાઈબેન ધરમશીભાઈ ઘોઘારી\nશ્રી વલ્લભભાઈ વેલજીભાઈ ઘોઘારી અને શ્રીમતી મંજુલાબેન વલ્લભભાઈ ઘોઘારી",
-    groomExtended: "જેનેક્ષ, ખુશાલ, દિપ્તાંશુ, સ્વેન્સી, ક્રિશા, આરુષી, ફ્રેનિશા",
+    groomExtended: "જેનેક્ષ, રુદ્ર, દિપ્તાંશુ, સ્વેન્સી, ક્રિશા, આરૂષી, ફ્રેનિશા",
     groomCompliments: "પરેશભાઈ ધરમશીભાઈ ઘોઘારી અને દક્ષાબેન પરેશભાઈ ઘોઘારી\nઅલ્પેશભાઈ ધરમશીભાઈ ઘોઘારી અને મિતલબેન અલ્પેશભાઈ ઘોઘારી",
     brideParents: "દિલીપભાઈ મોહનભાઈ કાકલોતર અને ઇલાબેન દિલીપભાઈ કાકલોતર",
     brideGrandparents: "સ્વ. મોહનભાઈ પ્રાગજીભાઈ કાકલોતર અને પાર્વતીબેન મોહનભાઈ કાકલોતર",
@@ -159,7 +159,7 @@ const LABELS = {
     familyCircle: "'s Family Circle",
     bestCompliments: "With Best Compliments From",
     dearlyWelcomed: "Dearly Welcomed By",
-    celebrationDetails: "Chandla Vidhi",
+    celebrationDetails: "Engagement Ceremony",
     eventProgram: "Ring Ceremony",
     theDate: "The Date",
     pleaseRSVP: "Please RSVP by August 1st, 2026",
@@ -190,7 +190,7 @@ const LABELS = {
     familyCircle: "નો સ્નેહી પરિવાર",
     bestCompliments: "લિ. શુભેચ્છક",
     dearlyWelcomed: "લિ. સ્નેહાધીન",
-    celebrationDetails: "ચાંદલા વિધિ",
+    celebrationDetails: "સગાઈ",
     eventProgram: "રિંગ સેરેમની",
     theDate: "તારીખ",
     pleaseRSVP: "કૃપા કરીને ૧ ઓગસ્ટ, ૨૦૨૬ સુધીમાં હાજરીની પુષ્ટિ કરો",
@@ -540,7 +540,7 @@ export default function InvitationContent({ language = "en" }: { language?: "en"
           
           <div className="text-center mb-16">
             <FadeUp>
-              <h3 className="font-serif text-3xl md:text-4xl text-sky-950 font-light tracking-wide">
+              <h3 className="font-serif text-3xl md:text-4xl text-sky-950 font-light tracking-wider uppercase">
                 {labels.celebrationDetails}
               </h3>
               <div className="mt-3 w-12 h-[2px] bg-gold-400 mx-auto" />
@@ -613,7 +613,7 @@ export default function InvitationContent({ language = "en" }: { language?: "en"
           
           <div className="text-center mb-16">
             <FadeUp>
-              <h3 className="font-serif text-3xl md:text-4xl text-sky-950 font-light tracking-wide">
+              <h3 className="font-serif text-3xl md:text-4xl text-sky-950 font-light tracking-wider uppercase">
                 {labels.eventProgram}
               </h3>
               <div className="mt-3 w-12 h-[2px] bg-gold-400 mx-auto" />
