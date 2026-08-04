@@ -1,5 +1,7 @@
 import { Calendar, Clock, MapPin, Heart, Users, Sparkles, Music, Utensils } from "lucide-react";
 import FadeUp from "./FadeUp";
+import ScratchCardDate from "./ScratchCardDate";
+import TypewriterMessagePanel from "./TypewriterMessagePanel";
 import heroImage from "../assets/images/delvin_siddhi_reference_hero_1783780196159.jpg";
 import footerImage from "../assets/images/footer_art_ds_perfect_1783782009912.jpg";
 
@@ -288,11 +290,12 @@ export default function InvitationContent({ language = "en" }: { language?: "en"
             }`}>{config.couple.bride}</span>
           </h1>
 
-          <p className={`text-xs md:text-sm text-sky-900 drop-shadow-[0_1px_2px_rgba(255,255,255,0.6)] max-w-md mx-auto mb-8 font-semibold ${
-            language === "gu" ? "font-sans tracking-normal" : "font-cinzel tracking-[0.3em] uppercase"
-          }`}>
-            {language === "gu" ? "૨૩ ઓગસ્ટ ૨૦૨૬" : "23 August 2026"}
-          </p>
+          <div className="mb-8">
+            <ScratchCardDate
+              dateText={language === "gu" ? "૨૩ ઓગસ્ટ ૨૦૨૬" : "23 August 2026"}
+              language={language}
+            />
+          </div>
 
           {/* Hero Couple Photo within a Premium Double Gold-Border Arch Frame */}
           <div className="relative group max-w-[280px] sm:max-w-[340px] md:max-w-[380px] mx-auto mb-6 transition-transform duration-500 hover:scale-[1.02]">
@@ -335,13 +338,8 @@ export default function InvitationContent({ language = "en" }: { language?: "en"
               {labels.withJoyfulHearts}
             </h2>
             
-            {/* Rich Glassmorphism Prose Card */}
-            <div className="glass-card-light p-8 md:p-12 rounded-2xl gold-border relative overflow-hidden">
-              <div className="absolute inset-0 bg-[#e0f2fe]/20 pointer-events-none" />
-              <p className="font-serif text-lg md:text-xl text-sky-950 leading-relaxed italic md:px-4 whitespace-pre-line">
-                "{config.event.message}"
-              </p>
-            </div>
+            {/* Scroll-Triggered Typewriter Message Panel */}
+            <TypewriterMessagePanel message={config.event.message} />
           </FadeUp>
 
           {/* Family Details Sub-section */}
@@ -566,9 +564,10 @@ export default function InvitationContent({ language = "en" }: { language?: "en"
                   <h4 className="font-cinzel text-xs tracking-widest text-gold-500 uppercase mb-3">
                     {labels.theDate} & {labels.theTime}
                   </h4>
-                  <p className="font-serif text-base font-semibold text-sky-950 mb-1">
-                    {config.event.dateString}
-                  </p>
+                  <ScratchCardDate
+                    dateText={config.event.dateString}
+                    language={language}
+                  />
                   <div className="w-8 h-[1px] bg-gold-300/60 my-2" />
                   <p className="font-serif text-base font-semibold text-sky-950">
                     {config.event.timeString}
@@ -639,9 +638,10 @@ export default function InvitationContent({ language = "en" }: { language?: "en"
                   <h4 className="font-cinzel text-xs tracking-widest text-gold-500 uppercase mb-3">
                     {labels.theDate} & {labels.theTime}
                   </h4>
-                  <p className="font-serif text-base font-semibold text-sky-950 mb-1">
-                    {config.event.ringCeremonyDateString || config.event.dateString}
-                  </p>
+                  <ScratchCardDate
+                    dateText={config.event.ringCeremonyDateString || config.event.dateString}
+                    language={language}
+                  />
                   <div className="w-8 h-[1px] bg-gold-300/60 my-2" />
                   <p className="font-serif text-base font-semibold text-sky-950">
                     {config.event.ringCeremonyTimeString || "6:00 PM Onwards"}
