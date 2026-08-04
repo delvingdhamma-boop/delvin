@@ -292,7 +292,7 @@ export default function InvitationContent({ language = "en" }: { language?: "en"
 
           <div className="mb-8">
             <ScratchCardDate
-              dateText={language === "gu" ? "૨૩ ઓગસ્ટ" : "23 August"}
+              dateText={language === "gu" ? "૨૩ ઓગસ્ટ ૨૦૨૬" : "23 August 2026"}
               language={language}
             />
           </div>
