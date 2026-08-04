@@ -19,8 +19,8 @@ const INVITATION_CONFIG_EN = {
   event: {
     title: "Our Engagement Celebration",
     message: "To the lovely couple\nWishing you both a beautiful journey filled with love, happiness, and endless memories. May your bond grow stronger with each passing day, and may your life together be filled with joy, laughter, and love.",
-    dateString: "Sunday, August 23, 2026",
-    ringCeremonyDateString: "Thursday, August 27, 2026",
+    dateString: "Sunday, August 23",
+    ringCeremonyDateString: "Thursday, August 27",
     timeString: "9:00 AM Onwards",
     ringCeremonyTimeString: "6:00 PM Onwards",
     venue1Name: "Mahadev Party Plot",
@@ -89,8 +89,8 @@ const INVITATION_CONFIG_GU = {
   event: {
     title: "અમારી સગાઈ",
     message: "સ્નેહી દંપતીને\nતમારા બંનેની આ સુંદર સગાઈ સફર સ્નેહ, સુખ અને અવિસ્મરણીય સ્મૃતિઓથી ભરેલી રહે તેવી હાર્દિક શુભકામનાઓ. આપનો આ પવિત્ર સ્નેહ સંબંધ દિન-પ્રતિદિન વધુ ગાઢ બને અને આપનું સહજીવન હર્ષ, ઉલ્લાસ અને અનંત પ્રેમથી હર્યું-ભર્યું રહે.",
-    dateString: "રવિવાર, ૨૩ ઓગસ્ટ ૨૦૨૬",
-    ringCeremonyDateString: "ગુરુવાર, ૨૭ ઓગસ્ટ ૨૦૨૬",
+    dateString: "રવિવાર, ૨૩ ઓગસ્ટ",
+    ringCeremonyDateString: "ગુરુવાર, ૨૭ ઓગસ્ટ",
     timeString: "સવારે ૯:૦૦ વાગ્યાથી",
     ringCeremonyTimeString: "સાંજે ૬:૦૦ વાગ્યાથી",
     venue1Name: "મહાદેવ પાર્ટી પ્લોટ",
@@ -292,7 +292,7 @@ export default function InvitationContent({ language = "en" }: { language?: "en"
 
           <div className="mb-8">
             <ScratchCardDate
-              dateText={language === "gu" ? "૨૩ ઓગસ્ટ ૨૦૨૬" : "23 August 2026"}
+              dateText={language === "gu" ? "૨૩ ઓગસ્ટ" : "23 August"}
               language={language}
             />
           </div>
